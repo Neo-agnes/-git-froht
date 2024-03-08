@@ -1,4 +1,35 @@
-// Calculator 클래스 LV 2
+// AddOperation 클래스
+class AddOperation {
+    func operate(_ firstNumber: Int, _ secondNumber: Int) -> Int {
+        return firstNumber + secondNumber
+    }
+}
+
+// SubtractOperation 클래스
+class SubtractOperation {
+    func operate(_ firstNumber: Int, _ secondNumber: Int) -> Int {
+        return firstNumber - secondNumber
+    }
+}
+
+// MultiplyOperation 클래스
+class MultiplyOperation {
+    func operate(_ firstNumber: Int, _ secondNumber: Int) -> Int {
+        return firstNumber * secondNumber
+    }
+}
+
+// DivideOperation 클래스
+class DivideOperation {
+    func operate(_ firstNumber: Int, _ secondNumber: Int) -> Int {
+        guard secondNumber != 0 else {
+            fatalError("Division by zero is not allowed")
+        }
+        return firstNumber / secondNumber
+    }
+}
+
+// Calculator 클래스
 class Calculator {
     let addOperation = AddOperation()
     let subtractOperation = SubtractOperation()
@@ -26,7 +57,6 @@ class Calculator {
             // 유효하지 않은 연산자인 경우 nil 반환
             result = nil
         }
-
         return result
     }
 }

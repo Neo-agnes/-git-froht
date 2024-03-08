@@ -20,7 +20,6 @@ class Calculator {
         default:
             break
         }
-
         return result
     }
 }
